@@ -32,9 +32,12 @@
     "./src/auto/index.js"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chaudhary-Saumya/motion-organic.git"
+    "url": "git+https://github.com/Chaudhary-Saumya/motion-organic.git"
   },
   "bugs": {
     "url": "https://github.com/Chaudhary-Saumya/motion-organic/issues"
