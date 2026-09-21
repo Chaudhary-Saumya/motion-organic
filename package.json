@@ -1,0 +1,83 @@
+{
+  "name": "motion-organic",
+  "version": "2.5.0",
+  "description": "32 cinema-grade, physics-driven organic page transitions, 20 production text effects, and 3D MoHorizon cylindrical engine for Vanilla JavaScript & React. Zero dependencies, pure spring momentum, procedural Web Audio FX & SVG morphing.",
+  "type": "module",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./auto": {
+      "types": "./src/auto/index.d.ts",
+      "import": "./src/auto/index.js",
+      "default": "./src/auto/index.js"
+    },
+    "./react": {
+      "types": "./src/react/index.d.ts",
+      "import": "./src/react/index.js",
+      "default": "./src/react/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "./src/auto/index.js"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chaudhary-Saumya/motion-organic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chaudhary-Saumya/motion-organic/issues"
+  },
+  "homepage": "https://motion-organic.kharsan.com/",
+  "keywords": [
+    "animation",
+    "motion",
+    "page-transitions",
+    "transitions",
+    "react",
+    "react-transitions",
+    "nextjs",
+    "text-effects",
+    "typography",
+    "declarative",
+    "spring-physics",
+    "web-audio",
+    "gesture-scrubbing",
+    "scroll-transitions",
+    "svg-mask",
+    "text-portal",
+    "organic-morph",
+    "claymorphism",
+    "isometric",
+    "glitch",
+    "micro-interactions",
+    "gsap-alternative",
+    "framer-motion-alternative",
+    "awwwards",
+    "zero-dependencies"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --test test/index.test.js",
+    "prepublishOnly": "npm pack --dry-run"
+  }
+}
+
