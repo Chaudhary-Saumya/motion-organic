@@ -1,7 +1,7 @@
 {
   "name": "motion-organic",
-  "version": "2.5.0",
-  "description": "32 cinema-grade, physics-driven organic page transitions, 20 production text effects, and 3D MoHorizon cylindrical engine for Vanilla JavaScript & React. Zero dependencies, pure spring momentum, procedural Web Audio FX & SVG morphing.",
+  "version": "2.6.0",
+  "description": "36 cinema-grade organic page transitions, 20 production text effects, 23 cinema loaders & award-winning full-screen preloaders for Vanilla JavaScript & React. Zero dependencies, pure spring momentum, procedural Web Audio FX & SVG morphing.",
   "type": "module",
   "main": "src/index.js",
   "module": "src/index.js",

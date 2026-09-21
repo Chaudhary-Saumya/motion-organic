@@ -57,6 +57,46 @@ test('Package Entry Point — motion-organic (src/index.js)', async () => {
   // 5. 3D Spatial Primitives & Device Frame
   assert.ok(pkg.HorizonDrum, 'HorizonDrum is exported');
   assert.ok(pkg.DeviceFrame, 'DeviceFrame is exported');
+
+  // 6. Modern Loading Animations & Screen Suite (23 Archetypes + Awwwards Preloaders)
+  const loaderArchetypes = [
+    'QuantumChronosWormholeLoader', 'ObsidianLiquidCausticLoader', 'MagLevSuperconductorLoader',
+    'HyperPrismDispersionLoader', 'SingularityVortexLoader', 'HoloPrismCrystalLoader', 'OrbitalEclipseLoader',
+    'MorphingMetaballLoader', 'CyberMatrixScanLoader', 'QuantumSpinLoader',
+    'MinimalPulsePillLoader', 'NeuralSynapseLoader', 'LiquidMercuryDropletLoader',
+    'AuraRingsConcentricLoader', 'HyperLoopDNAHelixLoader', 'IsometricCubeStackLoader',
+    'DotMatrixWaveLoader', 'RadialEqualizerWaveLoader', 'InfinityMorphRibbonLoader',
+    'GlitchTerminalMatrixLoader', 'SonarPulseEchoLoader', 'ShatterAssembleLoader',
+    'ParticleSupernovaLoader', 'HypercubeTesseractLoader',
+  ];
+
+  for (const name of loaderArchetypes) {
+    assert.ok(pkg[name], `Loader ${name} is exported`);
+    assert.equal(typeof pkg[name], 'function', `${name} is a class constructor`);
+  }
+  assert.ok(pkg.MoLoadingScreen, 'MoLoadingScreen is exported');
+  assert.ok(pkg.AwwwardsKineticOdometerVaultScreen, 'AwwwardsKineticOdometerVaultScreen is exported');
+  assert.ok(pkg.AwwwardsLiquidChromiumCounterScreen, 'AwwwardsLiquidChromiumCounterScreen is exported');
+  assert.ok(pkg.AwwwardsSplitFlapChronometerScreen, 'AwwwardsSplitFlapChronometerScreen is exported');
+  assert.ok(pkg.AwwwardsCurvedCurtainScreen, 'AwwwardsCurvedCurtainScreen is exported');
+  assert.ok(pkg.AwwwardsDoubleLiquidWaveCurtainScreen, 'AwwwardsDoubleLiquidWaveCurtainScreen is exported');
+  assert.ok(pkg.AwwwardsIridescentLiquidMeshCurtainScreen, 'AwwwardsIridescentLiquidMeshCurtainScreen is exported');
+  assert.ok(pkg.LiquidWaveTextScreen, 'LiquidWaveTextScreen is exported');
+  assert.ok(pkg.ArchitecturalVenetianScreen, 'ArchitecturalVenetianScreen is exported');
+  assert.ok(pkg.CyberpunkBiometricHoloScreen, 'CyberpunkBiometricHoloScreen is exported');
+  assert.ok(pkg.AwwwardsFilmRollNegativeScreen, 'AwwwardsFilmRollNegativeScreen is exported');
+  assert.ok(pkg.AwwwardsTypographyStencilPortalScreen, 'AwwwardsTypographyStencilPortalScreen is exported');
+  assert.ok(pkg.AwwwardsMetaballBioFusionScreen, 'AwwwardsMetaballBioFusionScreen is exported');
+  assert.ok(pkg.AwwwardsDiagonalRazorShutterScreen, 'AwwwardsDiagonalRazorShutterScreen is exported');
+  assert.ok(pkg.KineticTypoStaggerCascadeScreen, 'KineticTypoStaggerCascadeScreen is exported');
+  assert.ok(pkg.MoltenLiquidChromeBlobScreen, 'MoltenLiquidChromeBlobScreen is exported');
+  assert.ok(pkg.AwwwardsChromaticGlitchWarpScreen, 'AwwwardsChromaticGlitchWarpScreen is exported');
+  assert.ok(pkg.AwwwardsBrutalistEditorialScissorScreen, 'AwwwardsBrutalistEditorialScissorScreen is exported');
+  assert.ok(pkg.AwwwardsMagneticSingularityVortexScreen, 'AwwwardsMagneticSingularityVortexScreen is exported');
+  assert.ok(pkg.AwwwardsFluidMeshGradientBlobScreen, 'AwwwardsFluidMeshGradientBlobScreen is exported');
+  assert.ok(pkg.AwwwardsPrismGeodesicUnfoldScreen, 'AwwwardsPrismGeodesicUnfoldScreen is exported');
+  assert.ok(pkg.AwwwardsNeoTokyoHoloDeckScreen, 'AwwwardsNeoTokyoHoloDeckScreen is exported');
+  assert.ok(pkg.LOADER_CATALOG, 'LOADER_CATALOG is exported');
 });
 
 test('Auto Declarative Entry Point — motion-organic/auto (src/auto/index.js)', async () => {
@@ -136,6 +176,55 @@ test('React Entry Point — motion-organic/react (src/react/index.js)', async ()
   assert.ok(react.Wave, '<Wave> primitive is exported');
   assert.ok(react.Reveal, '<Reveal> primitive is exported');
   assert.ok(react.Parallax, '<Parallax> primitive is exported');
+
+  // Loaders Suite (23 Archetypes + Awwwards Screens)
+  assert.ok(react.MoLoader, '<MoLoader> is exported');
+  assert.ok(react.MoLoadingScreen, '<MoLoadingScreen> is exported');
+  assert.ok(react.AwwwardsKineticOdometerVaultScreen, '<AwwwardsKineticOdometerVaultScreen> is exported');
+  assert.ok(react.AwwwardsLiquidChromiumCounterScreen, '<AwwwardsLiquidChromiumCounterScreen> is exported');
+  assert.ok(react.AwwwardsSplitFlapChronometerScreen, '<AwwwardsSplitFlapChronometerScreen> is exported');
+  assert.ok(react.AwwwardsCurvedCurtainScreen, '<AwwwardsCurvedCurtainScreen> is exported');
+  assert.ok(react.AwwwardsDoubleLiquidWaveCurtainScreen, '<AwwwardsDoubleLiquidWaveCurtainScreen> is exported');
+  assert.ok(react.AwwwardsIridescentLiquidMeshCurtainScreen, '<AwwwardsIridescentLiquidMeshCurtainScreen> is exported');
+  assert.ok(react.LiquidWaveTextScreen, '<LiquidWaveTextScreen> is exported');
+  assert.ok(react.ArchitecturalVenetianScreen, '<ArchitecturalVenetianScreen> is exported');
+  assert.ok(react.CyberpunkBiometricHoloScreen, '<CyberpunkBiometricHoloScreen> is exported');
+  assert.ok(react.AwwwardsFilmRollNegativeScreen, '<AwwwardsFilmRollNegativeScreen> is exported');
+  assert.ok(react.AwwwardsTypographyStencilPortalScreen, '<AwwwardsTypographyStencilPortalScreen> is exported');
+  assert.ok(react.AwwwardsMetaballBioFusionScreen, '<AwwwardsMetaballBioFusionScreen> is exported');
+  assert.ok(react.AwwwardsDiagonalRazorShutterScreen, '<AwwwardsDiagonalRazorShutterScreen> is exported');
+  assert.ok(react.KineticTypoStaggerCascadeScreen, '<KineticTypoStaggerCascadeScreen> is exported');
+  assert.ok(react.MoltenLiquidChromeBlobScreen, '<MoltenLiquidChromeBlobScreen> is exported');
+  assert.ok(react.AwwwardsChromaticGlitchWarpScreen, '<AwwwardsChromaticGlitchWarpScreen> is exported');
+  assert.ok(react.AwwwardsBrutalistEditorialScissorScreen, '<AwwwardsBrutalistEditorialScissorScreen> is exported');
+  assert.ok(react.AwwwardsMagneticSingularityVortexScreen, '<AwwwardsMagneticSingularityVortexScreen> is exported');
+  assert.ok(react.AwwwardsFluidMeshGradientBlobScreen, '<AwwwardsFluidMeshGradientBlobScreen> is exported');
+  assert.ok(react.AwwwardsPrismGeodesicUnfoldScreen, '<AwwwardsPrismGeodesicUnfoldScreen> is exported');
+  assert.ok(react.AwwwardsNeoTokyoHoloDeckScreen, '<AwwwardsNeoTokyoHoloDeckScreen> is exported');
+  assert.ok(react.QuantumChronosWormholeLoader, '<QuantumChronosWormholeLoader> is exported');
+  assert.ok(react.ObsidianLiquidCausticLoader, '<ObsidianLiquidCausticLoader> is exported');
+  assert.ok(react.MagLevSuperconductorLoader, '<MagLevSuperconductorLoader> is exported');
+  assert.ok(react.HyperPrismDispersionLoader, '<HyperPrismDispersionLoader> is exported');
+  assert.ok(react.SingularityVortexLoader, '<SingularityVortexLoader> is exported');
+  assert.ok(react.HoloPrismCrystalLoader, '<HoloPrismCrystalLoader> is exported');
+  assert.ok(react.OrbitalEclipseLoader, '<OrbitalEclipseLoader> is exported');
+  assert.ok(react.MorphingMetaballLoader, '<MorphingMetaballLoader> is exported');
+  assert.ok(react.CyberMatrixScanLoader, '<CyberMatrixScanLoader> is exported');
+  assert.ok(react.QuantumSpinLoader, '<QuantumSpinLoader> is exported');
+  assert.ok(react.MinimalPulsePillLoader, '<MinimalPulsePillLoader> is exported');
+  assert.ok(react.NeuralSynapseLoader, '<NeuralSynapseLoader> is exported');
+  assert.ok(react.LiquidMercuryDropletLoader, '<LiquidMercuryDropletLoader> is exported');
+  assert.ok(react.AuraRingsConcentricLoader, '<AuraRingsConcentricLoader> is exported');
+  assert.ok(react.HyperLoopDNAHelixLoader, '<HyperLoopDNAHelixLoader> is exported');
+  assert.ok(react.IsometricCubeStackLoader, '<IsometricCubeStackLoader> is exported');
+  assert.ok(react.DotMatrixWaveLoader, '<DotMatrixWaveLoader> is exported');
+  assert.ok(react.RadialEqualizerWaveLoader, '<RadialEqualizerWaveLoader> is exported');
+  assert.ok(react.InfinityMorphRibbonLoader, '<InfinityMorphRibbonLoader> is exported');
+  assert.ok(react.GlitchTerminalMatrixLoader, '<GlitchTerminalMatrixLoader> is exported');
+  assert.ok(react.SonarPulseEchoLoader, '<SonarPulseEchoLoader> is exported');
+  assert.ok(react.ShatterAssembleLoader, '<ShatterAssembleLoader> is exported');
+  assert.ok(react.ParticleSupernovaLoader, '<ParticleSupernovaLoader> is exported');
+  assert.ok(react.HypercubeTesseractLoader, '<HypercubeTesseractLoader> is exported');
 });
 
 test('Physics Engine & Spring Numerical Integration', async () => {
@@ -217,4 +306,23 @@ test('Coercion and Option Parser', async () => {
   assert.equal(coerceValue('0.75'), 0.75);
   assert.equal(coerceValue('#ff0055'), '#ff0055');
   assert.equal(coerceValue('curtain-peel'), 'curtain-peel');
+});
+
+test('Cinema Loader Architecture & Lifecycle (SSR Safe & DOM Clean for all 18 Archetypes)', async () => {
+  const { LOADER_CATALOG } = await import('../src/primitives/loaders.js');
+
+  const dummyEl = {
+    appendChild: () => {},
+    classList: { add: () => {} },
+  };
+
+  for (const [key, LoaderClass] of Object.entries(LOADER_CATALOG)) {
+    const instance = new LoaderClass(dummyEl, { size: 64 });
+    assert.equal(typeof instance.destroy, 'function', `Loader ${key} has destroy() method`);
+    if (typeof instance.setProgress === 'function') {
+      instance.setProgress(60);
+      assert.equal(instance.progress, 60);
+    }
+    instance.destroy();
+  }
 });

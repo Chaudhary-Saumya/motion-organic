@@ -685,3 +685,287 @@ export interface MoPortalProps extends HTMLAttributes<HTMLElement> {
 }
 export function MoPortal(props: MoPortalProps): JSX.Element;
 
+// ─── Modern Cinema Loading Animations & Screen Suite (23 Archetypes + Awwwards Screens) ───
+
+export interface MoLoaderProps extends HTMLAttributes<HTMLElement> {
+  type?: string;
+  size?: number;
+  color?: string;
+  secondaryColor?: string;
+  accentColor?: string;
+  coreColor?: string;
+  speed?: number;
+  progress?: number;
+  telemetry?: boolean;
+  interactive?: boolean;
+  particleCount?: number;
+  as?: string;
+}
+
+export const MoLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const QuantumChronosWormholeLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const ObsidianLiquidCausticLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const MagLevSuperconductorLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const HyperPrismDispersionLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const SingularityVortexLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const HoloPrismCrystalLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const OrbitalEclipseLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const MorphingMetaballLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const CyberMatrixScanLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const QuantumSpinLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const MinimalPulsePillLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const NeuralSynapseLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const LiquidMercuryDropletLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const AuraRingsConcentricLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const HyperLoopDNAHelixLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const IsometricCubeStackLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const DotMatrixWaveLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const RadialEqualizerWaveLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const InfinityMorphRibbonLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const GlitchTerminalMatrixLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const SonarPulseEchoLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const ShatterAssembleLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const ParticleSupernovaLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+export const HypercubeTesseractLoader: React.ForwardRefExoticComponent<MoLoaderProps>;
+
+export interface MoLoadingScreenProps {
+  title?: string;
+  subtitle?: string;
+  type?: string;
+  accentColor?: string;
+  bgColor?: string;
+  sound?: boolean;
+  duration?: number;
+  autoExit?: boolean;
+  interactiveGlow?: boolean;
+  onComplete?: () => void;
+}
+export function MoLoadingScreen(props: MoLoadingScreenProps): null;
+
+export interface AwwwardsKineticOdometerVaultScreenProps {
+  brand?: string;
+  subtitle?: string;
+  accentColor?: string;
+  secondaryColor?: string;
+  bgColor?: string;
+  sound?: boolean;
+  duration?: number;
+  interactive?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsKineticOdometerVaultScreen(props: AwwwardsKineticOdometerVaultScreenProps): null;
+
+export interface AwwwardsLiquidChromiumCounterScreenProps {
+  brand?: string;
+  accentColor?: string;
+  secondaryColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsLiquidChromiumCounterScreen(props: AwwwardsLiquidChromiumCounterScreenProps): null;
+
+export interface AwwwardsSplitFlapChronometerScreenProps {
+  brand?: string;
+  accentColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsSplitFlapChronometerScreen(props: AwwwardsSplitFlapChronometerScreenProps): null;
+
+export interface AwwwardsCurvedCurtainScreenProps {
+  brand?: string;
+  words?: string[];
+  subtitle?: string;
+  accentColor?: string;
+  secondaryColor?: string;
+  bgColor?: string;
+  textColor?: string;
+  curveColor?: string;
+  sound?: boolean;
+  interactive?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsCurvedCurtainScreen(props: AwwwardsCurvedCurtainScreenProps): null;
+
+export interface AwwwardsDoubleLiquidWaveCurtainScreenProps {
+  brand?: string;
+  words?: string[];
+  accentColor?: string;
+  secondaryColor?: string;
+  bgColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsDoubleLiquidWaveCurtainScreen(props: AwwwardsDoubleLiquidWaveCurtainScreenProps): null;
+
+export interface AwwwardsIridescentLiquidMeshCurtainScreenProps {
+  brand?: string;
+  words?: string[];
+  tier1Color?: string;
+  tier2Color?: string;
+  tier3Color?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsIridescentLiquidMeshCurtainScreen(props: AwwwardsIridescentLiquidMeshCurtainScreenProps): null;
+
+export interface LiquidWaveTextScreenProps {
+  text?: string;
+  subtext?: string;
+  waveColor?: string;
+  bgColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function LiquidWaveTextScreen(props: LiquidWaveTextScreenProps): null;
+
+export interface ArchitecturalVenetianScreenProps {
+  slatCount?: number;
+  bgColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function ArchitecturalVenetianScreen(props: ArchitecturalVenetianScreenProps): null;
+
+export interface CyberpunkBiometricHoloScreenProps {
+  brand?: string;
+  targetWord?: string;
+  accentColor?: string;
+  bgColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function CyberpunkBiometricHoloScreen(props: CyberpunkBiometricHoloScreenProps): null;
+
+export interface AwwwardsFilmRollNegativeScreenProps {
+  brand?: string;
+  subtitle?: string;
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsFilmRollNegativeScreen(props: AwwwardsFilmRollNegativeScreenProps): null;
+
+export interface AwwwardsTypographyStencilPortalScreenProps {
+  brand?: string;
+  subtitle?: string;
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsTypographyStencilPortalScreen(props: AwwwardsTypographyStencilPortalScreenProps): null;
+
+export interface AwwwardsMetaballBioFusionScreenProps {
+  brand?: string;
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsMetaballBioFusionScreen(props: AwwwardsMetaballBioFusionScreenProps): null;
+
+export interface AwwwardsDiagonalRazorShutterScreenProps {
+  brand?: string;
+  subtitle?: string;
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function AwwwardsDiagonalRazorShutterScreen(props: AwwwardsDiagonalRazorShutterScreenProps): null;
+
+export interface KineticTypoStaggerCascadeScreenProps {
+  brand?: string;
+  words?: string[];
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function KineticTypoStaggerCascadeScreen(props: KineticTypoStaggerCascadeScreenProps): null;
+
+
+export interface MoltenLiquidChromeBlobScreenProps {
+  brand?: string;
+  accentColor?: string;
+  sound?: boolean;
+  duration?: number;
+  onComplete?: () => void;
+}
+export function MoltenLiquidChromeBlobScreen(props: MoltenLiquidChromeBlobScreenProps): null;
+
+export interface AwwwardsChromaticGlitchWarpScreenProps {
+  brand?: string;
+  statusText?: string;
+  accentColor?: string;
+  secondaryColor?: string;
+  duration?: number;
+  sound?: boolean;
+  interactive?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsChromaticGlitchWarpScreen(props: AwwwardsChromaticGlitchWarpScreenProps): null;
+
+export interface AwwwardsBrutalistEditorialScissorScreenProps {
+  brands?: string[];
+  accentColor?: string;
+  secondaryColor?: string;
+  bgColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsBrutalistEditorialScissorScreen(props: AwwwardsBrutalistEditorialScissorScreenProps): null;
+
+export interface AwwwardsMagneticSingularityVortexScreenProps {
+  title?: string;
+  subtitle?: string;
+  particleCount?: number;
+  color?: string;
+  accentColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsMagneticSingularityVortexScreen(props: AwwwardsMagneticSingularityVortexScreenProps): null;
+
+export interface AwwwardsFluidMeshGradientBlobScreenProps {
+  brand?: string;
+  subtext?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsFluidMeshGradientBlobScreen(props: AwwwardsFluidMeshGradientBlobScreenProps): null;
+
+export interface AwwwardsPrismGeodesicUnfoldScreenProps {
+  title?: string;
+  subtitle?: string;
+  accentColor?: string;
+  gemColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsPrismGeodesicUnfoldScreen(props: AwwwardsPrismGeodesicUnfoldScreenProps): null;
+
+export interface AwwwardsNeoTokyoHoloDeckScreenProps {
+  brand?: string;
+  subtitle?: string;
+  accentColor?: string;
+  warningColor?: string;
+  duration?: number;
+  sound?: boolean;
+  onComplete?: () => void;
+}
+export function AwwwardsNeoTokyoHoloDeckScreen(props: AwwwardsNeoTokyoHoloDeckScreenProps): null;

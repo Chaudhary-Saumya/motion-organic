@@ -53,6 +53,58 @@ export {
   MoCurvedPortal,
 } from './MoDeviceFrame.js';
 
+// ─── Modern Cinema Loading Animations & Screen Suite (23 Archetypes + 8 Experiential Screens) ──────────
+export {
+  MoLoader,
+  MoLoadingScreen,
+  AwwwardsKineticOdometerVaultScreen,
+  AwwwardsLiquidChromiumCounterScreen,
+  AwwwardsSplitFlapChronometerScreen,
+  AwwwardsCurvedCurtainScreen,
+  AwwwardsDoubleLiquidWaveCurtainScreen,
+  AwwwardsIridescentLiquidMeshCurtainScreen,
+  LiquidWaveTextScreen,
+  ArchitecturalVenetianScreen,
+  CyberpunkBiometricHoloScreen,
+  AwwwardsFilmRollNegativeScreen,
+  AwwwardsTypographyStencilPortalScreen,
+  AwwwardsMetaballBioFusionScreen,
+  AwwwardsDiagonalRazorShutterScreen,
+  KineticTypoStaggerCascadeScreen,
+  MoltenLiquidChromeBlobScreen,
+  AwwwardsChromaticGlitchWarpScreen,
+  AwwwardsBrutalistEditorialScissorScreen,
+  AwwwardsMagneticSingularityVortexScreen,
+  AwwwardsFluidMeshGradientBlobScreen,
+  AwwwardsPrismGeodesicUnfoldScreen,
+  AwwwardsNeoTokyoHoloDeckScreen,
+  QuantumChronosWormholeLoader,
+  ObsidianLiquidCausticLoader,
+  MagLevSuperconductorLoader,
+  HyperPrismDispersionLoader,
+  SingularityVortexLoader,
+  HoloPrismCrystalLoader,
+  OrbitalEclipseLoader,
+  MorphingMetaballLoader,
+  CyberMatrixScanLoader,
+  QuantumSpinLoader,
+  MinimalPulsePillLoader,
+  NeuralSynapseLoader,
+  LiquidMercuryDropletLoader,
+  AuraRingsConcentricLoader,
+  HyperLoopDNAHelixLoader,
+  IsometricCubeStackLoader,
+  DotMatrixWaveLoader,
+  RadialEqualizerWaveLoader,
+  InfinityMorphRibbonLoader,
+  GlitchTerminalMatrixLoader,
+  SonarPulseEchoLoader,
+  ShatterAssembleLoader,
+  ParticleSupernovaLoader,
+  HypercubeTesseractLoader,
+} from './MoLoader.js';
+
 // ─── Advanced / Programmatic API ────────────────────────────────────────────
 export { usePageTransition } from './usePageTransition.js';
 export { ScrollTransitionZone } from './ScrollTransitionZone.js';
+

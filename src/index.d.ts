@@ -339,3 +339,319 @@ export class CharacterWaveText { constructor(el: HTMLElement, options?: any); tr
 export class CursorProgressRing { constructor(options?: any); destroy(): void; }
 export class ShapeMorphDivider { constructor(svgEl: SVGElement, options?: any); destroy(): void; }
 export class ElasticScrollReveal { constructor(elements: HTMLElement[] | NodeListOf<HTMLElement>, options?: any); destroy(): void; }
+
+// Modern Cinema Loading Animations & Screen Suite (23 Archetypes + Awwwards Preloaders)
+export class QuantumChronosWormholeLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class ObsidianLiquidCausticLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class MagLevSuperconductorLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class HyperPrismDispersionLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class SingularityVortexLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class HoloPrismCrystalLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class OrbitalEclipseLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class MorphingMetaballLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class CyberMatrixScanLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class QuantumSpinLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class MinimalPulsePillLoader { constructor(element: HTMLElement, options?: any); setProgress(percent: number): void; destroy(): void; }
+export class NeuralSynapseLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class LiquidMercuryDropletLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class AuraRingsConcentricLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class HyperLoopDNAHelixLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class IsometricCubeStackLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class DotMatrixWaveLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class RadialEqualizerWaveLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class InfinityMorphRibbonLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class GlitchTerminalMatrixLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class SonarPulseEchoLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class ShatterAssembleLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class ParticleSupernovaLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+export class HypercubeTesseractLoader { constructor(element: HTMLElement, options?: any); destroy(): void; }
+
+export const LOADER_CATALOG: Record<string, any>;
+
+export class MoLoadingScreen {
+  constructor(options?: {
+    title?: string;
+    subtitle?: string;
+    type?: string;
+    accentColor?: string;
+    bgColor?: string;
+    sound?: boolean;
+    duration?: number;
+    autoExit?: boolean;
+    interactiveGlow?: boolean;
+    onComplete?: () => void;
+  });
+  setProgress(percent: number): void;
+  exit(): void;
+}
+
+export class AwwwardsKineticOdometerVaultScreen {
+  constructor(options?: {
+    brand?: string;
+    subtitle?: string;
+    accentColor?: string;
+    secondaryColor?: string;
+    bgColor?: string;
+    sound?: boolean;
+    duration?: number;
+    interactive?: boolean;
+    onComplete?: () => void;
+  });
+  setProgress(pct: number): void;
+  exit(): void;
+}
+
+export class AwwwardsLiquidChromiumCounterScreen {
+  constructor(options?: {
+    brand?: string;
+    accentColor?: string;
+    secondaryColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsSplitFlapChronometerScreen {
+  constructor(options?: {
+    brand?: string;
+    accentColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsCurvedCurtainScreen {
+  constructor(options?: {
+    brand?: string;
+    words?: string[];
+    subtitle?: string;
+    accentColor?: string;
+    secondaryColor?: string;
+    bgColor?: string;
+    textColor?: string;
+    curveColor?: string;
+    sound?: boolean;
+    interactive?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsDoubleLiquidWaveCurtainScreen {
+  constructor(options?: {
+    brand?: string;
+    words?: string[];
+    accentColor?: string;
+    secondaryColor?: string;
+    bgColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsIridescentLiquidMeshCurtainScreen {
+  constructor(options?: {
+    brand?: string;
+    words?: string[];
+    tier1Color?: string;
+    tier2Color?: string;
+    tier3Color?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class LiquidWaveTextScreen {
+  constructor(options?: {
+    text?: string;
+    subtext?: string;
+    waveColor?: string;
+    bgColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class ArchitecturalVenetianScreen {
+  constructor(options?: {
+    slatCount?: number;
+    bgColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class CyberpunkBiometricHoloScreen {
+  constructor(options?: {
+    brand?: string;
+    targetWord?: string;
+    accentColor?: string;
+    bgColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsFilmRollNegativeScreen {
+  constructor(options?: {
+    brand?: string;
+    subtitle?: string;
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsTypographyStencilPortalScreen {
+  constructor(options?: {
+    brand?: string;
+    subtitle?: string;
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsMetaballBioFusionScreen {
+  constructor(options?: {
+    brand?: string;
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsDiagonalRazorShutterScreen {
+  constructor(options?: {
+    brand?: string;
+    subtitle?: string;
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class KineticTypoStaggerCascadeScreen {
+  constructor(options?: {
+    brand?: string;
+    words?: string[];
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+
+export class MoltenLiquidChromeBlobScreen {
+  constructor(options?: {
+    brand?: string;
+    accentColor?: string;
+    sound?: boolean;
+    duration?: number;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsChromaticGlitchWarpScreen {
+  constructor(options?: {
+    brand?: string;
+    statusText?: string;
+    accentColor?: string;
+    secondaryColor?: string;
+    duration?: number;
+    sound?: boolean;
+    interactive?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsBrutalistEditorialScissorScreen {
+  constructor(options?: {
+    brands?: string[];
+    accentColor?: string;
+    secondaryColor?: string;
+    bgColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsMagneticSingularityVortexScreen {
+  constructor(options?: {
+    title?: string;
+    subtitle?: string;
+    particleCount?: number;
+    color?: string;
+    accentColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsFluidMeshGradientBlobScreen {
+  constructor(options?: {
+    brand?: string;
+    subtext?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsPrismGeodesicUnfoldScreen {
+  constructor(options?: {
+    title?: string;
+    subtitle?: string;
+    accentColor?: string;
+    gemColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}
+
+export class AwwwardsNeoTokyoHoloDeckScreen {
+  constructor(options?: {
+    brand?: string;
+    subtitle?: string;
+    accentColor?: string;
+    warningColor?: string;
+    duration?: number;
+    sound?: boolean;
+    onComplete?: () => void;
+  });
+  exit(): void;
+}

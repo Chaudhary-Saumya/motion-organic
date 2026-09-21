@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>motion-organic — Cinema Loading Animations & Experiential Preloaders Suite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #07070a;
+      --card: rgba(255, 255, 255, 0.025);
+      --border: rgba(255, 255, 255, 0.07);
+      --accent: #00e5ff;
+      --text: #f0f0f5;
+      --muted: #8e8e9f;
+      --glow: rgba(0, 229, 255, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      min-height: 100vh;
+      padding: 40px 24px 100px;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(0, 229, 255, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(255, 0, 119, 0.035) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(124, 106, 255, 0.04) 0%, transparent 50%);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.08;
+      margin-bottom: 14px;
+      background: linear-gradient(180deg, #ffffff 0%, #9e9eb0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p.subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Hero Experiential Launchers */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px 32px;
+      margin-bottom: 54px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.5), transparent);
+    }
+
+    .hero-banner h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-banner p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    button.btn {
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button.btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 229, 255, 0.35);
+    }
+
+    button.btn-awwwards {
+      background: linear-gradient(135deg, #00e5ff 0%, #7000ff 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25);
+    }
+
+    button.btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border: 1px solid var(--border);
+    }
+
+    button.btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 10px 24px rgba(255, 255, 255, 0.08);
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin: 48px 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .count-badge {
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* Loader Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 270px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .card:hover {
+      border-color: rgba(0, 229, 255, 0.35);
+      background: rgba(255, 255, 255, 0.045);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px var(--glow);
+    }
+
+    .card-preview {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 140px;
+    }
+
+    .card-info {
+      width: 100%;
+      text-align: left;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+      letter-spacing: -0.2px;
+    }
+
+    .card-desc {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .slider-box {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slider-box input[type="range"] {
+      flex: 1;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .slider-box span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      min-width: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Next-Gen Creative Motion Suite</div>
+      <h1>Awwwards-Grade Cinema Loaders & Preloaders</h1>
+      <p class="subtitle">23 ultra-high-definition interactive loaders and award-winning full-screen preloaders built on pure GPU transforms, SVG filters, HTML5 canvas, and Web Audio.</p>
+    </header>
+
+    <!-- 1. Fullscreen Experiential Preloaders -->
+    <div class="hero-banner">
+      <h2>🏆 Awwwards Gold-Standard Preloader Experiences</h2>
+      <p>Click below to test smooth 60/120 FPS full-screen preloader animations with digital counters, liquid bezier curves, wave dynamics, and audio cues.</p>
+      
+      <div class="btn-group">
+        <button class="btn btn-awwwards" id="btnLaunchLiquidChromium" style="border-color:#7000ff;box-shadow:0 0 25px rgba(112,0,255,0.3);"><span>🌊</span> Liquid Chromium Wave Counter</button>
+        <button class="btn btn-awwwards" id="btnLaunchSplitFlap" style="border-color:#ffb800;box-shadow:0 0 25px rgba(255,184,0,0.3);"><span>🔢</span> 3D Mechanical Split-Flap</button>
+        <button class="btn btn-awwwards" id="btnLaunchDoubleLiquidCurtain"><span>⚡</span> Dual-Wave Liquid Scissor</button>
+        <button class="btn btn-awwwards" id="btnLaunchIridescentCurtain"><span>🌈</span> 3-Tier Prismatic Liquid Curtain</button>
+        <button class="btn btn-awwwards" id="btnLaunchChromaticWarp"><span>🔮</span> Chromatic Glitch Warp</button>
+        <button class="btn btn-awwwards" id="btnLaunchBrutalistScissor"><span>✂️</span> Brutalist Editorial Scissor</button>
+        <button class="btn btn-awwwards" id="btnLaunchMagneticSingularity"><span>🌌</span> Magnetic Singularity Vortex</button>
+        <button class="btn btn-awwwards" id="btnLaunchFluidMeshBlob"><span>🌈</span> Viscous Fluid Mesh Iris</button>
+        <button class="btn btn-awwwards" id="btnLaunchNeoTokyoHoloDeck"><span>🎛️</span> Neo-Tokyo Holo-Deck</button>
+        <button class="btn btn-awwwards" id="btnLaunchLiquidWave"><span>💧</span> Fluid Wave Canvas</button>
+        <button class="btn btn-awwwards" id="btnLaunchVenetian"><span>🏛️</span> Venetian Blind Slats</button>
+        <button class="btn btn-awwwards" id="btnLaunchFilmNegative"><span>🎞️</span> 35mm Film Negative Shutter</button>
+        <button class="btn btn-awwwards" id="btnLaunchStencilPortal"><span>🕳️</span> Brutalist 50x Stencil Dive</button>
+        <button class="btn btn-awwwards" id="btnLaunchBioFusion"><span>🧬</span> Cellular Goo Bio-Fusion</button>
+        <button class="btn btn-awwwards" id="btnLaunchDiagonalRazor"><span>🪟</span> Diagonal Mirror Sheer</button>
+        <button class="btn btn-awwwards" id="btnLaunchBiometricCyber"><span>⚡</span> Cyber Biometric HUD</button>
+        <button class="btn btn-awwwards" id="btnLaunchKineticCascade"><span>🏁</span> Kinetic Typo Cascade</button>
+        <button class="btn btn-awwwards" id="btnLaunchMoltenChrome"><span>🪐</span> Molten Chrome Mercury</button>
+        <button class="btn btn-secondary" id="btnLaunchVortex"><span>🌀</span> Universal Wormhole</button>
+        <button class="btn btn-secondary" id="btnLaunchCyber"><span>📟</span> Universal Cyber HUD</button>
+        <button class="btn btn-secondary" id="btnLaunchMetaball"><span>🫧</span> Universal Metaballs</button>
+      </div>
+    </div>
+
+    <!-- 2. Grid of all 23 Loaders -->
+    <div class="section-title">
+      <span>🎨 Complete Archetype Catalog</span>
+      <span class="count-badge">23 Archetypes</span>
+    </div>
+
+    <div class="grid" id="loadersGrid"></div>
+  </div>
+
+  <script type="module">
+    import {
+      LOADER_CATALOG,
+      MoLoadingScreen,
+      AwwwardsKineticOdometerVaultScreen,
+      AwwwardsLiquidChromiumCounterScreen,
+      AwwwardsSplitFlapChronometerScreen,
+      AwwwardsCurvedCurtainScreen,
+      AwwwardsDoubleLiquidWaveCurtainScreen,
+      AwwwardsIridescentLiquidMeshCurtainScreen,
+      LiquidWaveTextScreen,
+      ArchitecturalVenetianScreen,
+      CyberpunkBiometricHoloScreen,
+      AwwwardsFilmRollNegativeScreen,
+      AwwwardsTypographyStencilPortalScreen,
+      AwwwardsMetaballBioFusionScreen,
+      AwwwardsDiagonalRazorShutterScreen,
+      KineticTypoStaggerCascadeScreen,
+      MoltenLiquidChromeBlobScreen,
+      AwwwardsChromaticGlitchWarpScreen,
+      AwwwardsBrutalistEditorialScissorScreen,
+      AwwwardsMagneticSingularityVortexScreen,
+      AwwwardsFluidMeshGradientBlobScreen,
+      AwwwardsPrismGeodesicUnfoldScreen,
+      AwwwardsNeoTokyoHoloDeckScreen,
+      QuantumChronosWormholeLoader,
+      ObsidianLiquidCausticLoader,
+      MagLevSuperconductorLoader,
+      HyperPrismDispersionLoader,
+      SingularityVortexLoader,
+      HoloPrismCrystalLoader,
+      OrbitalEclipseLoader,
+      MorphingMetaballLoader,
+      CyberMatrixScanLoader,
+      QuantumSpinLoader,
+      MinimalPulsePillLoader,
+      NeuralSynapseLoader,
+      LiquidMercuryDropletLoader,
+      AuraRingsConcentricLoader,
+      HyperLoopDNAHelixLoader,
+      IsometricCubeStackLoader,
+      DotMatrixWaveLoader,
+      RadialEqualizerWaveLoader,
+      InfinityMorphRibbonLoader,
+      GlitchTerminalMatrixLoader,
+      SonarPulseEchoLoader,
+      ShatterAssembleLoader,
+      ParticleSupernovaLoader,
+      HypercubeTesseractLoader,
+    } from './src/index.js?v=2.8.0';
+
+    const LOADER_METADATA = [
+      { id: 'supernova', name: 'Particle Supernova 3D Vortex', desc: 'Real-time HTML5 3D orbital particle swarm with luminous center bloom and radial velocity acceleration', color: '#00e5ff', ctor: ParticleSupernovaLoader },
+      { id: 'tesseract', name: 'Hypercube 4D Tesseract Matrix', desc: 'True mathematical 4D-to-3D isometric wireframe rotation matrix with vertices neon glow', color: '#00e5ff', ctor: HypercubeTesseractLoader },
+      { id: 'wormhole', name: 'Quantum Chronos Wormhole', desc: 'Spacetime curvature with real-time SVG turbulence & chromatic dispersion', color: '#00e5ff', ctor: QuantumChronosWormholeLoader },
+      { id: 'obsidian', name: 'Obsidian Liquid Caustic', desc: 'Molten dark glass sphere with internal caustic refraction & specular sheen', color: '#00e5ff', ctor: ObsidianLiquidCausticLoader },
+      { id: 'maglev', name: 'MagLev Superconductor', desc: '3D quantum levitator floating above magnetic base with plasma energy', color: '#00ff88', ctor: MagLevSuperconductorLoader },
+      { id: 'dispersion', name: 'HyperPrism Dispersion', desc: '3D pyramid splitting white light into spectral Snell\'s Law rainbow beams', color: '#00e5ff', ctor: HyperPrismDispersionLoader },
+      { id: 'prism', name: 'Holo Prism Crystal', desc: '3D faceted crystal with chromatic dispersion beams', color: '#00e5ff', ctor: HoloPrismCrystalLoader },
+      { id: 'eclipse', name: 'Orbital Eclipse', desc: 'Dual counter-rotating refractive rings with focal flare', color: '#7c6aff', ctor: OrbitalEclipseLoader },
+      { id: 'metaball', name: 'Morphing Metaball', desc: 'Harmonic SVG liquid coalescence with fluid goo filter', color: '#00e5ff', ctor: MorphingMetaballLoader },
+      { id: 'cyber', name: 'Cyber Matrix Scan', desc: 'Tactical sci-fi radar scan with real-time HUD telemetry', color: '#00ff88', ctor: CyberMatrixScanLoader },
+      { id: 'quantum', name: 'Quantum Spin Gyro', desc: '3D gyroscopic gimbal rings with perspective depth', color: '#ff0055', ctor: QuantumSpinLoader },
+      { id: 'pill', name: 'Minimal Pulse Pill', desc: 'Luxury glass pill capsule with elastic spring progress fill', color: '#00e5ff', ctor: MinimalPulsePillLoader, isPill: true },
+      { id: 'synapse', name: 'Neural Synapse', desc: 'Bioluminescent pulsing neural axon cluster sending sparks', color: '#00e5ff', ctor: NeuralSynapseLoader },
+      { id: 'mercury', name: 'Liquid Mercury', desc: 'Molten liquid chrome droplet breathing with surface tension', color: '#00e5ff', ctor: LiquidMercuryDropletLoader },
+      { id: 'aura', name: 'Aura Concentric Rings', desc: 'Minimalist luxury organic breathing aura ripple rings', color: '#7c6aff', ctor: AuraRingsConcentricLoader },
+      { id: 'helix', name: 'HyperLoop DNA Helix', desc: 'Double-helix 3D strand twisting with chemical base pairs', color: '#00ff88', ctor: HyperLoopDNAHelixLoader },
+      { id: 'cube', name: 'Isometric Cube Stack', desc: '3D stepped neon cube cascade rising and morphing in space', color: '#facc15', ctor: IsometricCubeStackLoader },
+      { id: 'dot-wave', name: 'Dot Matrix Wave', desc: 'Kinetic 3x3 dot matrix grid rippling in sinusoidal wave', color: '#00e5ff', ctor: DotMatrixWaveLoader },
+      { id: 'radial-eq', name: 'Radial Equalizer', desc: 'Circular audio frequency spectrum visualizer bars pulsing', color: '#f43f5e', ctor: RadialEqualizerWaveLoader },
+      { id: 'infinity', name: 'Infinity Ribbon', desc: 'Continuous 3D Möbius infinity strip with traveling neon energy', color: '#a855f7', ctor: InfinityMorphRibbonLoader },
+      { id: 'glitch', name: 'Glitch Terminal Matrix', desc: 'High-tech cyberpunk matrix stream with CRT phosphor flicker', color: '#22c55e', ctor: GlitchTerminalMatrixLoader },
+      { id: 'sonar', name: 'Sonar Pulse Echo', desc: 'Acoustic sonar wave rings propagating with depth gradient', color: '#06b6d4', ctor: SonarPulseEchoLoader },
+      { id: 'shatter', name: 'Shatter Assemble', desc: 'Geometric polygon shards disintegrating and snapping back', color: '#e11d48', ctor: ShatterAssembleLoader },
+    ];
+
+    const grid = document.getElementById('loadersGrid');
+
+    LOADER_METADATA.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const preview = document.createElement('div');
+      preview.className = 'card-preview';
+
+      const info = document.createElement('div');
+      info.className = 'card-info';
+      info.innerHTML = `
+        <div class="card-title">${item.name}</div>
+        <div class="card-desc">${item.desc}</div>
+      `;
+
+      card.appendChild(preview);
+      card.appendChild(info);
+      grid.appendChild(card);
+
+      const instance = new item.ctor(preview, {
+        size: 76,
+        color: item.color,
+        speed: 2.5,
+      });
+
+      if (item.isPill) {
+        instance.setProgress(75);
+        const sliderBox = document.createElement('div');
+        sliderBox.className = 'slider-box';
+        sliderBox.innerHTML = `
+          <input type="range" min="0" max="100" value="75" />
+          <span>75%</span>
+        `;
+        const input = sliderBox.querySelector('input');
+        const span = sliderBox.querySelector('span');
+        input.addEventListener('input', (e) => {
+          const v = Number(e.target.value);
+          instance.setProgress(v);
+          span.textContent = `${v}%`;
+        });
+        info.appendChild(sliderBox);
+      }
+    });
+
+    // Experiential Fullscreen Launchers
+    document.getElementById('btnLaunchLiquidChromium')?.addEventListener('click', () => {
+      new AwwwardsLiquidChromiumCounterScreen({
+        brand: 'CHROMIUM // HYDRODYNAMICS',
+        accentColor: '#00e5ff',
+        secondaryColor: '#7000ff',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchSplitFlap')?.addEventListener('click', () => {
+      new AwwwardsSplitFlapChronometerScreen({
+        brand: 'CHRONO // SPLIT-FLAP',
+        accentColor: '#ffb800',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchDoubleLiquidCurtain')?.addEventListener('click', () => {
+      new AwwwardsDoubleLiquidWaveCurtainScreen({
+        brand: 'ATELIER // LIQUID HORIZON',
+        words: ['RESONANCE', 'SYNERGY', 'ATMOSPHERE', 'FUTURE'],
+        accentColor: '#00e5ff',
+        secondaryColor: '#7928ca',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchIridescentCurtain')?.addEventListener('click', () => {
+      new AwwwardsIridescentLiquidMeshCurtainScreen({
+        brand: 'PRISMATIC FLUID DYNAMICS',
+        words: ['SPECTRUM', 'LUMINESCENCE', 'DIFFRACTION', 'ELEGANCE'],
+        tier1Color: '#ff0055',
+        tier2Color: '#7928ca',
+        tier3Color: '#08080d',
+        duration: 3200,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchChromaticWarp')?.addEventListener('click', () => {
+      new AwwwardsChromaticGlitchWarpScreen({
+        brand: 'HYPERDRIVE // 2026',
+        statusText: 'WARPING SPATIAL CHROMATICS',
+        accentColor: '#00f0ff',
+        secondaryColor: '#ff0077',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchBrutalistScissor')?.addEventListener('click', () => {
+      new AwwwardsBrutalistEditorialScissorScreen({
+        brands: ['PARIS // TOKYO // MILAN', 'DIGITAL ARCHITECTURE', 'VOL. 2026 // MOTION', 'AVANT-GARDE FLUIDS'],
+        accentColor: '#e2ff3b',
+        secondaryColor: '#ff2a5f',
+        duration: 3200,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchMagneticSingularity')?.addEventListener('click', () => {
+      new AwwwardsMagneticSingularityVortexScreen({
+        title: 'GRAVITATIONAL SINGULARITY',
+        subtitle: 'ORBITAL ASTROPHYSICS ENGINE',
+        color: '#00f0ff',
+        accentColor: '#d65db1',
+        duration: 3200,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchFluidMeshBlob')?.addEventListener('click', () => {
+      new AwwwardsFluidMeshGradientBlobScreen({
+        brand: 'LUMEN // FLUID LABS',
+        subtext: 'HARMONIC VISCOSITY MATRIX',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchNeoTokyoHoloDeck')?.addEventListener('click', () => {
+      new AwwwardsNeoTokyoHoloDeckScreen({
+        brand: 'NEO-TOKYO // HUD.V4',
+        subtitle: 'QUANTUM NEURAL FREQUENCY LOCK',
+        accentColor: '#00ffff',
+        warningColor: '#ff0055',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchLiquidWave')?.addEventListener('click', () => {
+      new LiquidWaveTextScreen({
+        text: 'ORGANIC',
+        subtext: 'SIMULATING REAL-TIME HYDRODYNAMICS',
+        duration: 3200,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchVenetian')?.addEventListener('click', () => {
+      new ArchitecturalVenetianScreen({
+        slatCount: 8,
+        duration: 2500,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchFilmNegative')?.addEventListener('click', () => {
+      new AwwwardsFilmRollNegativeScreen({
+        brand: '35MM // ARCHIVE',
+        subtitle: 'ANALOG OPTICAL REEL • FRAME 024',
+        accentColor: '#ff4500',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchStencilPortal')?.addEventListener('click', () => {
+      new AwwwardsTypographyStencilPortalScreen({
+        brand: 'DIVE // 2026',
+        subtitle: 'IMMERSIVE SPATIAL STENCIL PORTAL',
+        accentColor: '#00e5ff',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchBioFusion')?.addEventListener('click', () => {
+      new AwwwardsMetaballBioFusionScreen({
+        brand: 'BIO // FUSION',
+        accentColor: '#00ff88',
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchDiagonalRazor')?.addEventListener('click', () => {
+      new AwwwardsDiagonalRazorShutterScreen({
+        brand: 'ATELIER // MOTION',
+        subtitle: 'HIGH PRECISION DIAGONAL SHEER',
+        accentColor: '#ffffff',
+        duration: 2800,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchBiometricCyber')?.addEventListener('click', () => {
+      new CyberpunkBiometricHoloScreen({
+        brand: 'SYSTEM QUANTUM HUD',
+        targetWord: 'DECRYPTED',
+        accentColor: '#00ff88',
+        duration: 2800,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchKineticCascade')?.addEventListener('click', () => {
+      new KineticTypoStaggerCascadeScreen({
+        brand: 'MOTION ORGANIC',
+        words: ['AWWWARDS', 'STUDIO', 'KINETIC', 'INERTIA', 'EXCELLENCE'],
+        duration: 3000,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchMoltenChrome')?.addEventListener('click', () => {
+      new MoltenLiquidChromeBlobScreen({
+        brand: 'MOLTEN CHROME',
+        accentColor: '#00e5ff',
+        duration: 2800,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchVortex')?.addEventListener('click', () => {
+      new MoLoadingScreen({
+        title: 'STUDIO MONOLITH',
+        subtitle: 'Entering cosmic gravitational singularity...',
+        type: 'wormhole',
+        duration: 2600,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchCyber')?.addEventListener('click', () => {
+      new MoLoadingScreen({
+        title: 'CYBER MATRIX HUD',
+        subtitle: 'Establishing secure tactical telemetry link...',
+        type: 'cyber',
+        accentColor: '#00ff88',
+        duration: 2600,
+        sound: true,
+      });
+    });
+
+    document.getElementById('btnLaunchMetaball')?.addEventListener('click', () => {
+      new MoLoadingScreen({
+        title: 'LIQUID METABALLS',
+        subtitle: 'Simulating harmonic fluid fusion...',
+        type: 'metaball',
+        accentColor: '#00e5ff',
+        duration: 2600,
+        sound: true,
+      });
+    });
+  </script>
+</body>
+</html>

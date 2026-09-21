@@ -45,6 +45,13 @@ import { ElasticScrollReveal } from '../primitives/elasticScrollReveal.js';
 import { HorizonDrum } from '../primitives/horizonDrum.js';
 import { DepthParallax } from '../primitives/depthParallax.js';
 import { DeviceFrame } from '../primitives/deviceFrame.js';
+import {
+  OrbitalEclipseLoader,
+  MorphingMetaballLoader,
+  CyberMatrixScanLoader,
+  QuantumSpinLoader,
+  MinimalPulsePillLoader,
+} from '../primitives/loaders.js';
 
 // ─── Text Effects Suite ─────────────────────────────────────────────────────
 import { LiquidSheenText } from '../primitives/liquidSheenText.js';
@@ -508,6 +515,56 @@ export const PRIMITIVE_REGISTRY = {
       'accent-color':      'accentColor',
       'max-tilt':          'maxTilt',
       'interactive':       'interactive',
+    },
+  },
+  'loader-eclipse': {
+    ctor: OrbitalEclipseLoader,
+    elBased: true,
+    optionMap: {
+      'size':              'size',
+      'primary-color':     'primaryColor',
+      'secondary-color':   'secondaryColor',
+      'accent-color':      'accentColor',
+      'speed':             'speed',
+    },
+  },
+  'loader-metaball': {
+    ctor: MorphingMetaballLoader,
+    elBased: true,
+    optionMap: {
+      'size':              'size',
+      'color':             'color',
+      'accent-color':      'accentColor',
+      'speed':             'speed',
+    },
+  },
+  'loader-cyber': {
+    ctor: CyberMatrixScanLoader,
+    elBased: true,
+    optionMap: {
+      'size':              'size',
+      'color':             'color',
+      'glow-color':        'glowColor',
+      'telemetry':         'telemetry',
+    },
+  },
+  'loader-quantum': {
+    ctor: QuantumSpinLoader,
+    elBased: true,
+    optionMap: {
+      'size':              'size',
+      'color':             'color',
+      'secondary-color':   'secondaryColor',
+    },
+  },
+  'loader-pill': {
+    ctor: MinimalPulsePillLoader,
+    elBased: true,
+    optionMap: {
+      'width':             'width',
+      'height':            'height',
+      'gradient':          'gradient',
+      'bg-color':          'bgColor',
     },
   },
 };

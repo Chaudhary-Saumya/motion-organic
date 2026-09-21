@@ -289,6 +289,50 @@ class SoundEngine {
       }
     }
   }
+
+  /**
+   * Procedural organic acoustic pop transient
+   */
+  playPop(freq = 520, volume = 0.05) {
+    if (this.muted) return;
+    if (typeof window === 'undefined') return;
+    this._unlock();
+    if (!this.ctx || this.ctx.state !== 'running') return;
+    try {
+      const now = this.ctx.currentTime;
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, now);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.4, now + 0.015);
+      osc.frequency.exponentialRampToValueAtTime(freq * 0.4, now + 0.055);
+
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.exponentialRampToValueAtTime(volume, now + 0.005);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+
+      osc.connect(gain);
+      gain.connect(this.masterGain);
+      osc.start(now);
+      osc.stop(now + 0.065);
+    } catch {}
+  }
+
+  playWhoosh(volume = 0.2) {
+    this.play('whoosh', { volume });
+  }
+
+  playLiquid(volume = 0.2) {
+    this.play('liquid', { volume });
+  }
+
+  playShutter(volume = 0.2) {
+    this.play('shutter', { volume });
+  }
+
+  playChime(volume = 0.2) {
+    this.play('chime', { volume });
+  }
 }
 
 export const MoAudio = new SoundEngine();
