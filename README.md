@@ -24,8 +24,8 @@
 
 <p align="center">
   <a href="#-2-line-cinema-grade-text-effects"><strong>Text Effects (20)</strong></a> ·
-  <a href="#-all-26-cinema-grade-transitions"><strong>All 32 Transitions</strong></a> ·
-  <a href="#-cinema-loading-animations--loading-screens"><strong>Loaders &amp; Screens</strong></a> ·
+  <a href="#-all-26-cinema-grade-transitions"><strong>All 36 Transitions</strong></a> ·
+  <a href="#-cinema-loading-animations--loading-screens"><strong>Loaders &amp; Screens (41)</strong></a> ·
   <a href="#-next-level-framework-features"><strong>Next-Level Features</strong></a> ·
   <a href="#-primitives"><strong>Primitives</strong></a> ·
   <a href="#-vanilla-js--html-zero-js-declarative"><strong>Vanilla JS</strong></a> ·
