@@ -1,4 +1,8 @@
 <p align="center">
+  <a href="https://motion-organic.kharsan.com/"><img src="https://img.shields.io/badge/Live_Demo-motion--organic.kharsan.com-7c6aff?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" /></a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/npm/v/motion-organic?style=flat-square&color=7c6aff" alt="npm version" />
   <img src="https://img.shields.io/bundlephobia/minzip/motion-organic?style=flat-square&color=00d632&label=gzip" alt="bundle size" />
   <img src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square" alt="zero deps" />
@@ -15,11 +19,16 @@
 </p>
 
 <p align="center">
+  👉 <strong><a href="https://motion-organic.kharsan.com/">Explore the Live Interactive Playground &amp; Transitions Preview →</a></strong>
+</p>
+
+<p align="center">
   <a href="#-2-line-cinema-grade-text-effects"><strong>Text Effects (20)</strong></a> ·
   <a href="#-all-26-cinema-grade-transitions"><strong>All 32 Transitions</strong></a> ·
   <a href="#-next-level-framework-features"><strong>Next-Level Features</strong></a> ·
   <a href="#-primitives"><strong>Primitives</strong></a> ·
-  <a href="#-vanilla-js--html-zero-js-declarative"><strong>Vanilla JS</strong></a>
+  <a href="#-vanilla-js--html-zero-js-declarative"><strong>Vanilla JS</strong></a> ·
+  <a href="https://motion-organic.kharsan.com/"><strong>Live Demo ↗</strong></a>
 </p>
 
 ---
@@ -285,23 +294,7 @@ enableHistoryAdapter('curtain-peel');
 
 ## 📱 MoDevice & CurvedDeckPortal: 3D Device App & Curved Corner Portal Suite
 
-Inspired by award-winning interactive design portfolios (Raymmar showcase), this suite brings **3D interactive mobile phone mockups**, **conversational chat UI feeds**, and **asymmetrical sweeping curved deck page transitions** into your web applications with zero external dependencies.
-
-```
-   ┌─────────────────────────────────────────────────────────────┐
-   │                                                             │
-   │      ╭────────────────╮           ╭───────────────────────╮ │
-   │      │ ╭────────────╮ │           │                       │ │
-   │      │ │  Hey there │ │           │   PROJECT DETAILS     │ │
-   │      │ ╰────────────╯ │  ──────>  │                       │ │
-   │      │ ╭────────────╮ │  Sweep &  │   • Full Viewport     │ │
-   │      │ │ Let's talk │ │   Morph   │   • Luminous Border   │ │
-   │      │ ╰────────────╯ │           │   • Asymmetric Corner │ │
-   │      ╰────────────────╯           ╰───────────────────────╯ │
-   │       <MoDeviceFrame>               <MoCurvedPortal>        │
-   │    (3D Perspective Tilt)          (Curved Deck Swept-In)    │
-   └─────────────────────────────────────────────────────────────┘
-```
+Inspired by modern interactive portfolio showcases, this suite brings **3D interactive mobile phone mockups**, **conversational chat UI feeds**, and **asymmetrical sweeping curved deck page transitions** into your web applications with zero external dependencies.
 
 ### 💎 Key Features
 - **3D Device Spatial Ejection**: During route navigation, the current active phone/view tilts back in 3D perspective (`perspective(1200px) rotateX(22deg) rotateZ(-14deg) translateY(-120px) scale(0.88)`), receding smoothly into Z-space with spring physics.
@@ -382,18 +375,6 @@ export default function MobileAppHero() {
 ## 🪐 MoHorizon: 3D Cylindrical Horizon Roll & Spatial Perspective Depth Suite
 
 Elevate scrolling into a **true 3D spatial experience**. `MoHorizon` projects standard HTML elements onto a virtual **3D cylindrical drum or planetary horizon** in perspective space using pure trigonometric matrix projections without Three.js.
-
-```
-             Viewer Camera (Eye) [ • ]
-                     │  Perspective (d = 1000px)
-                     ▼
-          ┌─────────────────────┐  Top Horizon (Rotated -θ, Receded -Z, Atmospheric Fade)
-         ╱                       ╲
-        │      Active Element     │  Center Viewport (θ = 0, Z = 0, Full Specular Light)
-         ╲                       ╱
-          └─────────────────────┘  Bottom Horizon (Rotated +θ, Receded -Z, Atmospheric Fade)
-             Virtual Cylinder (R = 1200px)
-```
 
 ### 💎 Key Capabilities
 1. **Trigonometric Cylindrical Projection**:
